@@ -18,6 +18,10 @@
   background-color: FFFFFF;
 }
 
+
+/* hero section */
+
+
 .hero {
   padding: 20px 50px;
 }
@@ -45,6 +49,7 @@
   color: #000000;
 }
 
+
 .hero__text--caption{
   font-family: 'Poppins';
   font-style: normal;
@@ -55,8 +60,17 @@
   color: #222222;
 }
 
+
+/* cards section*/
+
+
+
 .card__info__rating > p{
   margin: 0px;
+}
+
+.cards-list{
+  display: flex;
 }
 
 .card {
@@ -79,6 +93,7 @@
   width: 175px;
   height: 14px;
   margin: 0px 0px 8px 0px;
+  padding-bottom: 5px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
@@ -86,11 +101,6 @@
   line-height: 110%;
   color: #222222;
 }
-
-.card__info__caption{
-  margin: 0px 0px 8px 0px;
-}
-
 
 .price-bold {
   font-weight: 600;
