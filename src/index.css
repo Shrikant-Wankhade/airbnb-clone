@@ -69,12 +69,21 @@
   margin: 0px;
 }
 
-.cards-list{
+.cards-list {
   display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
 }
 
 .card {
+  position: relative;
   margin-left: 50px;
+    width: 175px;
+    font-size: 12px;
+    flex: 0 0 auto;         /* ADD */
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
 }
 .card__info__rating {
   display: flex;
@@ -100,6 +109,7 @@
   font-size: 12px;
   line-height: 110%;
   color: #222222;
+  
 }
 
 .price-bold {
@@ -116,10 +126,21 @@
   font-weight: 300;
   font-size: 12px;
   line-height: 110%;
+  margin-top: auto;
 }
 
 .card__image {
   width: 176px;
   height: 235px;
   border-radius:9px ;
+}
+
+.card--status {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
