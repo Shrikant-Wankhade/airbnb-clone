@@ -1,32 +1,34 @@
 import React from "react"
 
-export default function Card({key,img,rating,reviewCount,country,title,price,openSpots}) {
+export default function Card(props) {
 
     let badgeText ;
-    if(openSpots === 0){
+    if(props.openSpots === 0){
         badgeText = "SOLD OUT";
-    }else if(location === "online"){
+    }else if(props.location === "online"){
         badgeText = "ONLINE";
     }else {
-        badgeText = country;
+        badgeText = props.location;
     }
+
+
     return (
         <div className="card">
             <div className="card--status">{badgeText}</div>
-            <img src={`../../images/${img}`} className="card__image" ></img>
+            <img src={`../../images/${props.coverImg}`} className="card__image" ></img>
             
             <div className="card__info">
                 <div className="card__info__rating">
                     <img src="../../images/star.png" className="card__info__rating--star"></img>
-                    <p className="card__info__rating--rate"> {rating} </p>
-                    <p className="card__info__rating--total-ratings">({reviewCount}) .</p>
-                    <p className="card__info__rating--country">{country}</p>
+                    <p className="card__info__rating--rate"> {props.stats.rating} </p>
+                    <p className="card__info__rating--total-ratings">({props.stats.reviewCount}) .</p>
+                    <p className="card__info__rating--country">{props.location}</p>
                 </div>
                 <div className="card__info__caption">
-                    <p className="card__info__caption--text">{title}</p>
+                    <p className="card__info__caption--text">{props.title}</p>
                 </div>
                 <div className="card__info__price">
-                    <p className="card__info__price--starting-price"><span className="price-bold">From ${price}</span> / person</p>
+                    <p className="card__info__price--starting-price"><span className="price-bold">From ${props.price}</span> / person</p>
 
                 </div>
             </div>    
